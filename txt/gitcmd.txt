@@ -1,0 +1,23 @@
+git rm --cached . -rf
+
+//克隆資料
+git clone <address>
+
+//重設位址
+git remote set-url origin
+
+//設置跟蹤
+git push -u <remote> HEAD
+
+//查看commit massage
+git log --oneline
+
+//更改commit message
+git commit --amend -m <訊息>
+
+//查看push位址
+ git remote -v
+
+//新增push 路徑
+ git remote set-url origin --push --add <address>
+

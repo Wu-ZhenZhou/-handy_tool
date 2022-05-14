@@ -1,0 +1,26 @@
+//檢查安裝完成
+heroku
+
+//登入
+heroku login
+
+//專案初始設定
+heroku create <專案名稱>  !!!需要特殊性避免撞名
+
+//設置遠端
+heroku git:remote -a <專案名稱>
+
+//commit 不同
+git commit -am "make it better"
+
+//push重點
+在fox檔案內push!!!
+在fox檔案內push!!!
+在fox檔案內push!!!
+
+//強制push
+git push -f
+
+//未使用之方法
+git checkout -b masterbranch
+git push heroku masterbranch
