@@ -21,6 +21,13 @@ git commit -am "make it better"
 //強制push
 git push -f
 
-//未使用之方法
+未使用之方法
 git checkout -b masterbranch
 git push heroku masterbranch
+
+//安裝 Heroku 上的資料庫
+heroku addons:create heroku-postgresql:hobby-dev
+
+//進行在 Heroku 上的資料庫遷移
+heroku run rake db:migrate
+

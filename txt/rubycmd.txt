@@ -13,4 +13,47 @@ rails generate controller kamigo
 //刪除kamigo檔案
 rails destroy controller kamigo
 
+//建立資料庫
+rails db:create
+
+//建立資料表
+rails generate model keyword_mapping keyword message
+
+//資料庫遷移:
+升級
+rails db:migrate
+降級
+rails db:rollback
+目前等級
+rails db:migrate:status
+
+//資料模型:
+rails console  or  rails c
+
+列出所有資料
+KeywordMapping.all
+
+新增資料
+new_data = KeywordMapping.new   
+設定 new_data 的 keyword 是 "Q"
+new_data.keyword = "Q"
+設定 new_data 的 message 是 "A"
+new_data.message = "A"
+
+存檔
+new_data.save 
+
+直接新增無須存檔步驟
+KeywordMapping.create({keyword:"Q2", message:"A2"})
+
+查詢資料
+KeywordMapping.where(keyword:"Q2")
+
+//篩選
+.all 取得全部
+.first 取第一筆
+.last 取最後一筆
+
+
+
 
