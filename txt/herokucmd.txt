@@ -4,6 +4,9 @@ heroku
 //登入
 heroku login
 
+//檢視
+heroku logs -t
+
 //專案初始設定
 heroku create <專案名稱>  !!!需要特殊性避免撞名
 
@@ -21,13 +24,15 @@ git commit -am "make it better"
 //強制push
 git push -f
 
-未使用之方法
-git checkout -b masterbranch
-git push heroku masterbranch
-
 //安裝 Heroku 上的資料庫
 heroku addons:create heroku-postgresql:hobby-dev
 
 //進行在 Heroku 上的資料庫遷移
 heroku run rake db:migrate
+
+----關閉了註冊功能後要怎麼新增自己的帳號?----
+heroku run rails console
+User.create(email:'Z486215937@gmail.com', password:'9955114466')
+
+sign up as heroku account
 

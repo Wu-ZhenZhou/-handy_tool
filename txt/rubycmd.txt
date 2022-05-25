@@ -54,6 +54,15 @@ KeywordMapping.where(keyword:"Q2")
 .first 取第一筆
 .last 取最後一筆
 
+//在 KeywordMapping 資料模型中新增欄位
+rails generate migration add_channel_id_to_keyword_reply
+在db/migrate加add_column :keyword_mappings, :channel_id, :string
 
+//使用產生器製作後台
 
+rails generate scaffold 資料模型名稱 和欄位們
+rails g scaffold keyword_mapping channel_id keyword message --skip
+
+//生成 8 組網址與 7 個 Controller Action 的對應
+rails routes
 
